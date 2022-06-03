@@ -14,7 +14,7 @@ export const getServerSideProps = async () => {
 }
 
 
-export default function Home({ repo, loca }) {
+export default function Home({ repo }) {
   return (
     <div>
       <Head>
@@ -24,7 +24,7 @@ export default function Home({ repo, loca }) {
       </Head>
       <Container>
         {repo.results.map((repo) => (
-            <Content>
+            <Content key={repo.id}>
               <AreaImage>
                 <img src={repo.image} />
               </AreaImage>
